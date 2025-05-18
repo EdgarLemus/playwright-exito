@@ -103,5 +103,5 @@ Puedes incluir capturas del reporte HTML o interfaz de checkout para enriquecer 
 
 ## 📬 Contacto
 
-Proyecto desarrollado por [Tu Nombre].  
-¿Preguntas o sugerencias? [tuemail@dominio.com]
+Proyecto desarrollado por Edgar Duvan Lemus Ramos.  
+¿Preguntas o sugerencias? [edgar_duvan_l_@hotmail.com]
