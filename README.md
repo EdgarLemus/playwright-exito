@@ -97,10 +97,6 @@ Puedes agregar lo siguiente en tu `package.json` para facilitar la ejecución:
 }
 ```
 
-## 📸 Capturas (opcional)
-
-Puedes incluir capturas del reporte HTML o interfaz de checkout para enriquecer la documentación.
-
 ## 📬 Contacto
 
 Proyecto desarrollado por Edgar Duvan Lemus Ramos.  
