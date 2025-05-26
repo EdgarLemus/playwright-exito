@@ -1,0 +1,32 @@
+name: Playwright Tests Parallel
+
+on:
+  workflow_dispatch:
+
+jobs:
+  playwright-parallel:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        spec:
+          - tests/exito.spec.ts
+          - tests/example.spec.ts
+        browser: [chromium, firefox]
+      max-parallel: 6
+    container:
+      image: mcr.microsoft.com/playwright:v1.44.0-jammy
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Run Playwright test for ${{ matrix.spec }} on ${{ matrix.browser }}
+        run: npx playwright test ${{ matrix.spec }} --project=${{ matrix.browser }} --reporter=html
+      - name: Upload HTML report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-${{ matrix.spec }}-${{ matrix.browser }}
+          path: playwright-report/
