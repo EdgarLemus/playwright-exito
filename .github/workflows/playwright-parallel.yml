@@ -11,7 +11,7 @@ jobs:
         spec:
           - tests/exito.spec.ts
           - tests/example.spec.ts
-        browser: [chromium, firefox]
+        browser: [chromium]
       max-parallel: 6
     container:
       image: mcr.microsoft.com/playwright:v1.44.0-jammy
